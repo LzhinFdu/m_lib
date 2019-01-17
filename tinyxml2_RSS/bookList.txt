@@ -1,0 +1,16 @@
+douban.book.review.xml
+36kr.xml
+coolshell.xml
+feed.xbeta.info.xml
+geekfan.xml
+geekpark.xml
+ifanr.xml
+iteye_news.xml
+jobbole.xml
+leiphone.xml
+phonekr.xml
+portablesoft.xml
+songshuhui.xml
+techweb.xml
+xbeta.info.xml
+xubeng.xml
