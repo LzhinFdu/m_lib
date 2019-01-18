@@ -1,6 +1,2 @@
 # m_lib
-Wish
-No Bugs
-in
-My Life
-！
+Bugs are OK, but not come into my LIFE.
