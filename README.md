@@ -1,2 +1,2 @@
 # m_lib
-Bugs are OK, but not come into my LIFE.
+A simple record of my lesson.
