@@ -1,0 +1,19 @@
+//log4cpp利用可变参数实现printf功能
+1. 库中warn（）函数本身支持任意可变参数类型：
+template <class...Args>
+void warn(const char* msg, Args...args)
+	_mycat.warn(msg, args...);//_mycat为Category对象
+
+
+调用：
+Mylogger::getInstance()->warn("message,number = %d, str = %s", number, str);
+//也就是说，这里只需要利用log4cpp库中封装好的warn函数的可变参数功能就行了
+//我自己的作业中相当于手动定义了该可变参数功能的实现
+
+2. warn函数的宏定义拼接
+#define prefix(msg) string("[").append(__FILE__).append(":")\
+.append(__FUNCTION__).append(":")\.append(std::to_string(__LINE__))\
+.append("]").append(msg).c_str();
+
+#define LogWarn(msg, ...) Mylogger::getInstance()->warn(prefix(msg), ##__VA_ARGS__)
+//这里值得注意的关键点在于宏定义可变参数的实现，其中##是为了防止可变参数为空，而","没有消除导致编译出错
